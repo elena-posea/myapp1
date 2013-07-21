@@ -1,0 +1,34 @@
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+     <div class="container">
+        <%=link_to "ror app", '#', id: "logo" %>
+        <nav>
+          <ul class="nav pull-right">
+              <li><%= link_to "Home", '#' %></li>
+              <!-- in loc de root_to poti sa pui root_path
+              nume controller, nume view
+              cand nu ai nicio variabila e ok ghilimele simple;
+              -->
+               <!--
+              <#%= 
+              user_signed_in? 
+              %>
+              -->
+              <% if user_signed_in? %>
+               <%= print current_user.email %>
+                 <% end %>
+              
+             
+              <li><%= link_to "Sign in", "users/sign_in" %></li>   
+              <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+              <!--
+              method: :delete
+              :method => :delete
+              -->
+   
+           </ul> 
+         </nav>
+      </div>
+  </div>
+</header>
+

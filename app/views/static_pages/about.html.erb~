@@ -1,0 +1,6 @@
+<h1>StaticPages#about</h1>
+<p>Eu sunt about</p>
+
+<%=
+
+%>
